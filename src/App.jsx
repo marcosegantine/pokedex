@@ -8,13 +8,10 @@ import PokeInfo from './componentes/PokeInfo';
 function App() {
   
   return (
-    <BrowserRouter className="App">
+    <div className="app">
       <Header />
-      <Routes>
-        <Route path="/" element={<Content />} />
-        <Route path="/content" element={<PokeInfo />} />
-      </Routes>
-    </BrowserRouter>
+      <Content/>
+    </div>
   );
 }
 

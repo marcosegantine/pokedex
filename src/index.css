@@ -7,19 +7,42 @@ body{
   background-color: #fceec8;
 }
 
-.container {
-  width: 90%;
-  margin: auto;
-  padding-top: 100px;
-  display: grid;
-  
-  
+.app {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.header-container{
+  margin: 30px auto;
 }
 
+.header-img{
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+.container {
+  margin: auto;
+  padding-top: 30px;
+  display:flex;
 
+}
+
+.left-content, 
+.right-content {
+  flex-basis: 50%;
+  padding: 0.5rem;
+}
+
+.left-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
 
 .card {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 250px;
   padding: 0 1.5rem;
@@ -34,3 +57,28 @@ body{
   cursor: pointer;
 }
 
+.btn-container{
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  font-size: 1.125rem;
+  padding: 0.5rem 1rem;
+  margin: 20px;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  background-color: #FFCB05;
+  color: #21386E;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 5px 5px rgba(108, 107, 107, 0.5);
+}
+
+.btn:hover {
+  background-color: rgba(255, 203, 5, 0.5);
+
+}
