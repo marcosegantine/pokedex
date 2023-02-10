@@ -1,10 +1,15 @@
+#root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
 *{
   margin: 0;
   padding: 0;
 }
 
 body{
-  background-color: #fceec8;
+  background-color: #fff7e0;
+
 }
 
 .app {
@@ -12,7 +17,9 @@ body{
   margin: 0 auto;
 }
 .header-container{
-  margin: 10px auto;
+  width: 100vw;
+  margin: 15px auto;
+ 
 }
 
 .header-img{
@@ -21,11 +28,11 @@ body{
   margin: 0 auto;
 }
 .container {
+  min-height: 700px;
   margin: auto;
   padding-top: 10px;
   display:flex;
   gap: 20px;
-
 }
 
 .left-content{
@@ -43,7 +50,7 @@ body{
   align-items: center;
   text-transform: capitalize;
   flex-shrink: 0;
-  width: 220px;
+  width: 230px;
   padding: 0 0.5rem;
   height: 70px;
   border-radius: 8px;
@@ -51,33 +58,49 @@ body{
   box-shadow: 0 0 2px 2px rgba(83, 82, 82, 0.5);
 }
 
-.right-content {
-  margin: 2rem auto;
-  width: 50vw;
-  padding: 0.5rem;
+.card-data{
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
+  gap: 10px;
+}
+
+.left-content img{
+  height: 70px;
+  margin-right: -5px;
 }
 
 .card:hover{
   background-color: rgb(0, 222, 249);
   cursor: pointer;
 }
+.right-content {
+  margin: rem auto;
+  width: 50vw;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  right: 0;
+}
+
 
 .tittle-pokedex{
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  color: #444343;
 }
 
 .imgContainer {
-  width: 60%;
+  max-width: 250px;
+
+  margin: 0 auto;
 }
 
 .imgContainer img {
-  width: 60%;
+  height: 180px;
+  max-width: 100%;
 }
 
 .type-container{
@@ -98,6 +121,26 @@ body{
 
 }
 
+.info-pokedex{
+  text-transform: uppercase;
+}
+
+.ability-group{
+  display: flex;
+  gap: 5px;
+  text-transform: capitalize;
+}
+.info-pokedex span {
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.loading{
+  font-size: 5rem;
+  display: block;
+  margin: auto;
+}
+
 .btn-container{
   width: 90%;
   display: flex;
@@ -115,14 +158,18 @@ body{
   color: #21386E;
   outline: none;
   border: none;
+  transition: all .2s;
   box-shadow: 0 0 2px 0px rgba(108, 107, 107, 0.5);
 }
 
-.btn[disabled] {
-  background-color: aliceblue;
-}
 
 .btn:hover {
   background-color: rgba(255, 203, 5, 0.5);
-
+  
+}
+.btn[disabled] {
+  background-color: lightgray;
+}
+.btn[disabled]:hover {
+  background-color: lightgray;
 }

@@ -11,6 +11,7 @@ const Content = () => {
   const [pokedex, setPokedex] = useState([]);
   const [loading, setLoading] = useState(false);
 
+
   const getAllPokemon = async () => {
     const response = await axios.get(url);
     setLoading(true);
@@ -28,9 +29,13 @@ const Content = () => {
 
   function toPrevPage() {
     setUrl(prevPage);
+    setPokedex([])
+
   }
   function toNextPage() {
     setUrl(nextPage);
+    setPokedex([])
+    setLoading(true)
   }
 
   useEffect(() => {
@@ -44,6 +49,7 @@ const Content = () => {
 
         <PokeDex pokedex={pokedex} />
       </div>
+
       <div className="btn-container">
         <button
           className="btn"
@@ -51,7 +57,7 @@ const Content = () => {
           disabled={prevPage ? false : true}
           // disabled = {true}
         >
-          Anterior
+          previous
         </button>
 
         <button
@@ -59,7 +65,7 @@ const Content = () => {
           onClick={toNextPage}
           disabled={nextPage ? false : true}
         >
-          Proximo
+          next
         </button>
       </div>
     </>

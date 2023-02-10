@@ -5,7 +5,7 @@ const Card = ({ data, loading, setPokedex }) => {
   return (
     <>
       {loading ? (
-        <h1>Loading...</h1>
+        <h1 className='loading'>Loading...</h1>
       ) : (
         <>
           <div className="left-content">
@@ -15,12 +15,11 @@ const Card = ({ data, loading, setPokedex }) => {
                 className="card"
                 onClick={() => setPokedex(item.data)}
               >
-                <div style={{ display: 'flex', gap: '10px' }}>
+                <div className='card-data'>
                   <h2>{item.data.id}</h2>
                   <h2>{item.data.name}</h2>
                 </div>
                 <img
-                  style={{ width: '70px' }}
                   src={item.data.sprites.front_default}
                   alt={item.data.name}
                 />
