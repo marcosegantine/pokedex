@@ -7,10 +7,10 @@ const Content = () => {
   const [url, setUrl] = useState('https://pokeapi.co/api/v2/pokemon/');
   const [nextPage, setNextPage] = useState();
   const [prevPage, setPrevPage] = useState();
-  const [data, setData] = useState([]);
+  const [pokemonsList, setPokemonsList] = useState([]);
   const [pokedex, setPokedex] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  // console.log('data', data);
 
   const getAllPokemon = async () => {
     const response = await axios.get(url);
@@ -23,19 +23,20 @@ const Content = () => {
       return data;
     });
 
-    setData(await Promise.all(promises));
+    const responsePokemons = await Promise.all(promises);
+
+    setPokemonsList(responsePokemons);
     setLoading(false);
   };
 
   function toPrevPage() {
     setUrl(prevPage);
-    setPokedex([])
-
+    setPokedex([]);                                                              
   }
   function toNextPage() {
     setUrl(nextPage);
-    setPokedex([])
-    setLoading(true)
+    setPokedex([]);
+    setLoading(true);
   }
 
   useEffect(() => {
@@ -45,9 +46,9 @@ const Content = () => {
   return (
     <>
       <div className="container">
-        <Card data={data} loading={loading} setPokedex={setPokedex} />
+        <Card pokemonsList={pokemonsList} loading={loading} setPokedex={setPokedex} />
 
-        <PokeDex pokedex={pokedex} />
+        <PokeDex pokedex={pokedex}/>
       </div>
 
       <div className="btn-container">

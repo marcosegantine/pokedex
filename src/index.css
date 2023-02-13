@@ -89,7 +89,7 @@ body{
   font-size: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  color: #444343;
+  color: #444444;
 }
 
 .imgContainer {
@@ -149,13 +149,14 @@ body{
 }
 
 .btn {
+  cursor: pointer;
   font-size: 1.125rem;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
   border-radius: 0.5rem;
   font-weight: bold;
-  background-color: #FFCB05;
-  color: #21386E;
+  background-color: #FFCC01;
+  color: #444444;
   outline: none;
   border: none;
   transition: all .2s;

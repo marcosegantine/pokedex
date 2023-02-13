@@ -1,6 +1,7 @@
 import React from 'react';
 
 const PokeDex = ({ pokedex }) => {
+
   return (
     <>
       {!pokedex.name ? (
@@ -11,7 +12,8 @@ const PokeDex = ({ pokedex }) => {
             <h1 className="tittle-pokedex">{pokedex.name}</h1>
             <div className="imgContainer">
               <img
-                src={pokedex.sprites.other.dream_world.front_default}
+                // src={pokedex.sprites.other.dream_world.front_default}
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokedex.id}.gif`}
                 alt={pokedex.name}
               />
             </div>

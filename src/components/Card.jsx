@@ -1,7 +1,7 @@
 import React from 'react';
 import PokeInfo from './PokeDex';
 
-const Card = ({ data, loading, setPokedex }) => {
+const Card = ({ pokemonsList, loading, setPokedex }) => {
   return (
     <>
       {loading ? (
@@ -9,7 +9,7 @@ const Card = ({ data, loading, setPokedex }) => {
       ) : (
         <>
           <div className="left-content">
-            {data.map((item) => (
+            {pokemonsList.map((item) => (
               <div
                 key={item.data.id}
                 className="card"
